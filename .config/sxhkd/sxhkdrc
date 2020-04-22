@@ -1,0 +1,109 @@
+#
+# GENERAL
+#
+
+# Reload config
+super + Escape
+	pkill -USR1 -x sxhkd
+
+#
+~button1
+	focus.sh
+
+# Selected Window Focus (Whatever the mouse is over)
+super + s
+	focus.sh
+# Selected Window Back Focus (Whatever the mouse is over, but the lowest in the stack)
+super + shift + s
+	focus.sh --bottom
+
+# Mouse Movement
+super + {Left, Right, Up, Down}
+	wmp -r -- {-20 0, 20 0, 0 -20, 0 20}
+# super + shift + left right up down
+# 	move the mouse to the bottom left corner of the nearest window in the given direction (excluding current focus)
+
+# Lauch Dmenu_run
+super + Return
+	dmenu_run $(cat $WMPATH/wm/dmenu_args)
+
+# Lauch Terminal
+super + shift + Return
+	urxvt
+
+#
+#
+#
+
+# Volume Mute
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+# Volume Up/Down
+XF86Audio{Raise,Lower}Volume
+	pactl set-sink-mute 0 false && pactl set-sink-volume 0 {+,-}5%
+
+# Mic Mute
+XF86AudioMicMute
+	pactl set-sink-mute 1 toggle
+
+#Brightness Up/Down
+XF86MonBrightness{Up,Down}
+	backlight {+,-}10%
+
+
+#???
+#Seems to be a super + d keypress?
+
+# Internet - This functions is built in at the hardware level
+#XF86WLan
+
+# Settings
+#XF86Tools
+
+# Search
+#XF86Search
+
+# Launch
+#XF86LaunchA
+
+# Explorer
+#XF86Explorer
+
+
+super + z
+	xmmv
+
+super + x
+	xmrs
+
+
+
+
+#
+# MKWM
+#
+
+# Tile/Untile Windows
+super + {t,u}
+	tile.sh {-s,-u} $(pfw)
+
+# Toggle Tag Activation
+super + {1,2,3,4}
+	tagTile.sh -t {1,2,3,4}
+
+# Force Tag Activation
+super + ctrl + {1,2,3,4}
+	tagTile.sh -f {1,2,3,4}
+
+# Set Tag for Window
+super + alt + {1,2,3,4,5}
+	tagTile.sh -s $(pfw) {1,2,3,4}
+
+# Unset Tag for Window
+super + alt + 0
+	tagTile.sh -u $(pfw)
+
+# Kill a window
+super + q
+	killw $(pfw)

@@ -6,7 +6,8 @@ setxkbmap -option caps:ctrl_modifier # Remap caps lock to ctrl
 xrdb -merge .Xresources
 
 # Set Background
-hsetroot -solid "#425e7d"
+#hsetroot -solid "$(colour -a)"
+hsetroot -fill "/home/vibex/Pictures/wallpaper.png"
 
 # Start Redshift
 redshift -l 42:-71 & # Set your lattitude and longitude
@@ -25,3 +26,4 @@ init.sh
 # Start Session
 #exec tinywm
 exec x-session
+#exec berry

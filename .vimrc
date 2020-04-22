@@ -31,6 +31,7 @@ let g:airline_extensions=[]
 set number " Turn on line numbering
 set ruler " Display coordinates and scroll % in bottom right
 set laststatus=2 " Always show status line
+set t_Co=16 " Force Vim to only use built in colours
 "set cursorline " show underline on currently selected line
 "set colorcolumn=100 " Mark the column to show max width
 "set virtualedit=all " Allow the cursor to go anywhere

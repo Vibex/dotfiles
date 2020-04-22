@@ -1,0 +1,112 @@
+!!!!! !!!!! !!    !!!!! !! !! !!!! 
+!!    !! !! !!    !! !! !! !! !! !!
+!!    !! !! !!    !! !! !! !! !!!! 
+!!    !! !! !!    !! !! !! !! !! !!
+!!!!! !!!!! !!!!! !!!!! !!!!! !! !!
+
+! special
+*.background:   #131923
+*.foreground:   #FEF9F6
+*.cursorColor:  #FEF9F6
+
+! black
+*.color0:       #232943
+*.color8:       #404861
+
+! red
+*.color1:       #BD878E
+*.color9:       #F0A3AD
+
+! green
+*.color2:       #9EBD86
+*.color10:      #C3EFA2
+
+! yellow
+*.color3:       #DECD9D
+*.color11:      #FFF0C1
+
+! blue
+*.color4:       #868DBD
+*.color12:      #A2ACEF
+
+! magenta
+*.color5:       #8F86BD
+*.color13:      #B0A3F0
+
+! cyan
+*.color6:       #86AABD
+*.color14:      #A3D6F0
+
+! white
+*.color7:       #E9E1E0
+*.color15:      #FEF9F6
+
+
+
+
+
+!! !! !!!!  !   ! !! !! !!!!!
+!! !! !! !!  ! !  !! !!   !  
+!! !! !!!!    !   !! !!   !  
+!! !! !! !!  ! !   ! !    !  
+!!!!! !! !! !   !   !     !  
+
+! Background
+! Must install rxvt-unicode-pixbuf-patched for this to work
+!URxvt.backgroundPixmap: /home/vibex/Pictures/pixmap.png;style=tiled
+
+! UI
+URxvt.scrollBar: False
+URxvt.skipBuiltinGlyphs: False
+URxvt.internalBorder: 24
+
+! Cursor
+URxvt.cursorBlink: True
+URxvt.cursorUnderline: False
+
+! Font
+!URxvt.font: xft:Gohu GohuFont:size=14
+!URxvt.boldFont: xft:Gohu GohuFont:Bold:size=14
+!URxvt.boldFont: xft:Monaco:size=11,xft:Monaco for Powerline
+URxvt.font: xft:MonacoB Nerd Font Mono:Bold:size=11,xft:Monaco for Powerline
+URxvt.boldFont: xft:MonacoB2 Nerd Font Mono:Bold:size=11,xft:Monaco for Powerline
+URxvt.letterSpace: 0
+
+! Dynamic Colours
+URxvt.dynamicColors: on
+
+! Enable Extensionsu
+! For somereason tabbedex stops the terminal from refreshing when the window is not focused. To sort this I have changed the default cursor and disabled blinking, but this is just a workaround, and Im not to fond of it
+URxvt.perl-ext-common: default,clipboard,selection-to-clipboard,matcher,resize-font
+!,tabbedex
+
+! Clipboard
+URxvt.clipboard.autocopy: True
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+! Matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+
+! Tabbedex
+URxvt.tabbedex.autohide: True
+URxvt.tabbedex.new-button: False
+
+URxvt.tabbedex.tabbar-fg: 4
+URxvt.tabbedex.tab-fg: 4
+URxvt.tabbedex.bell-fg: 1
+URxvt.tabbedex.bell-tab-fg: 1
+URxvt.tabbedex.title-fg: -2
+
+URxvt.tabbedex.tabbar-bg: 0
+URxvt.tabbedex.tab-bg: 8
+URxvt.tabbedex.bell-bg: 0
+URxvt.tabbedex.bell-tab-bg: 0
+URxvt.tabbedex.title-bg: -1
+
+! Font Resizing
+URxvt.keysym.C-Down: resize-font:smaller
+URxvt.keysym.C-Up: resize-font:bigger
+URxvt.iso14755: False
+URxvt.iso14755_52: False

@@ -1,6 +1,6 @@
 ### Set Defaults
 export EDITOR="/bin/vim"
-export VISUAL="/bin/gvim"
+#export VISUAL="/bin/gvim"
 
 
 ### Options section
@@ -61,10 +61,10 @@ bindkey '^[[Z' undo                                             # Undo last acti
 
 
 ### Alias section
-alias fin="cd; clear"                                                # Clean up after finishing a task
-alias cp="cp -i"                                                # Confirm before overwriting something
-alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
+alias fin="cd; clear"											# Clean up after finishing a task
+alias cp="cp -i"												# Confirm before overwriting something
+alias df='df -h'												# Human-readable sizes
+alias free='free -m'											# Show sizes in MB
 alias ls='ls --color=auto'										# Auto color ls output
 alias lsa='ls -A'												# Show hidden files
 alias lsl='ls -l -h'											# Show long file format (with human readable sizes)
